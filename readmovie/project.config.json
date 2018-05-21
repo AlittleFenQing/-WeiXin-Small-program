@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -13,8 +13,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.9.98",
 	"appid": "wx412040b453e5068a",
-	"projectname": "ReadMovie2",
-	"isGameTourist": false,
+	"projectname": "READE",
 	"condition": {
 		"search": {
 			"current": -1,

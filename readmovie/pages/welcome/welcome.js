@@ -1,10 +1,12 @@
-//welcome.js
-//获取应用实例
 Page({
-  onTap:function(){
-   
-    wx.redirectTo({
-      url: '../post/post',
-    })
-  }
+    onTap: function (event) {
+        // wx.navigateTo({
+        //     url:"../posts/post"
+        // });
+        
+        wx.switchTab({
+            url: "../posts/post"
+        });
+        
+    }
 })

@@ -1,8 +1,7 @@
-//app.js
 App({
-  globalData: {
-    g_isPlayingMusic: false,
-    g_currentMusicPostId: null,
-    doubanBase: "https://api.douban.com",
-  }
+    globalData:{
+        g_isPlayingMusic:false,
+        g_currentMusicPostId:null,
+        doubanBase: "http://t.yushu.im",
+    }
 })
