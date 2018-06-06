@@ -34,35 +34,35 @@
 * 请求方式：GET<br>
 * 请求地址：http://t.yushu.im<br/>
 * 数据参数：<br/>
-    ` onBindBlur: function (event) {
-    var text = event.detail.value;
-    var searchUrl = app.globalData.doubanBase + "/v2/movie/search?q=" + text;
-    this.getMovieListData(searchUrl, "searchResult", "");
-  },
+     onBindBlur: function (event) {<br/>
+    var text = event.detail.value;<br/>
+    var searchUrl = app.globalData.doubanBase + "/v2/movie/search?q=" + text;<br/>
+    this.getMovieListData(searchUrl, "searchResult", "");<br/>
+  },<br/>
 
-  processDoubanData: function (moviesDouban, settedKey, categoryTitle) {
-    var movies = [];
-    for (var idx in moviesDouban.subjects) {
-      var subject = moviesDouban.subjects[idx];
-      var title = subject.title;
-      if (title.length >= 6) {
-        title = title.substring(0, 6) + "...";
-      }
-      // [1,1,1,1,1] [1,1,1,0,0]
-      var temp = {
-        stars: util.convertToStarsArray(subject.rating.stars),
-        title: title,
-        average: subject.rating.average,
-        coverageUrl: subject.images.large,
-        movieId: subject.id
-      }
-      movies.push(temp)
-    }
-    var readyData = {};
-    readyData[settedKey] = {
-      categoryTitle: categoryTitle,
-      movies: movies
-    }
-    this.setData(readyData);
-  }
-})`<br/> 
+  processDoubanData: function (moviesDouban, settedKey, categoryTitle) {<br/>
+    var movies = [];<br/>
+    for (var idx in moviesDouban.subjects) {<br/>
+      var subject = moviesDouban.subjects[idx];<br/>
+      var title = subject.title;<br/>
+      if (title.length >= 6) {<br/>
+        title = title.substring(0, 6) + "...";<br/>
+      }<br/>
+      // [1,1,1,1,1] [1,1,1,0,0]<br/>
+      var temp = {<br/>
+        stars: util.convertToStarsArray(subject.rating.stars),<br/>
+        title: title,<br/>
+        average: subject.rating.average,<br/>
+        coverageUrl: subject.images.large,<br/>
+        movieId: subject.id<br/>
+      }<br/>
+      movies.push(temp)<br/>
+    }<br/>
+    var readyData = {};<br/>
+    readyData[settedKey] = {<br/>
+      categoryTitle: categoryTitle,<br/>
+      movies: movies<br/>
+    }<br/>
+    this.setData(readyData);<br/>
+  }<br/>
+})<br/> 
